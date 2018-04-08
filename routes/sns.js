@@ -7,9 +7,9 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.post('/', snsSubscriptionConfirmation.overrideContentType(),snsSubscriptionConfirmation.snsConfirmHandler(), (req, res, next) => {
+router.post('/', /*snsSubscriptionConfirmation.overrideContentType(),snsSubscriptionConfirmation.snsConfirmHandler(),*/ (req, res, next) => {
   // do stuff with req.body
   console.log(req.headers['x-amz-sns-message-type']);
- res.send('respond with a resource');
+// res.send('respond with a resource');
 });
 module.exports = router;
